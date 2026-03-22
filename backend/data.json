@@ -1,0 +1,26 @@
+{
+  "users": [
+    {
+      "id": "u-1",
+      "email": "hire-me@anshumat.org",
+      "password": "HireMe@2025!",
+      "name": "Demo User"
+    },
+    {
+      "id": "ac1afbe8-ba5d-4f6b-b1b1-abb0f771ef2b",
+      "email": "panditgovinda449@gmail.com",
+      "password": "123456",
+      "name": "govinda"
+    }
+  ],
+  "applications": [
+    {
+      "id": "ef522a36-53ce-4148-9044-b0155ad42936",
+      "userId": "ac1afbe8-ba5d-4f6b-b1b1-abb0f771ef2b",
+      "status": "draft",
+      "createdAt": "2026-03-22T10:13:59.431Z",
+      "updatedAt": "2026-03-22T10:14:00.516Z",
+      "formData": {}
+    }
+  ]
+}

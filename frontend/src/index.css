@@ -239,7 +239,7 @@ input:focus, select:focus, textarea:focus {
 }
 
 .flex { display: flex; }
-.flex-col { flexDirection: column; }
+.flex-col { display: flex; flex-direction: column; }
 .items-center { align-items: center; }
 .justify-between { justify-content: space-between; }
 .justify-center { justify-content: center; }

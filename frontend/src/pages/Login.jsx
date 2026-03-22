@@ -19,7 +19,8 @@ export default function Login() {
         try {
             await login(email, password);
             navigate('/dashboard');
-        } catch (err) {
+        } catch (error) {
+            console.error('Login error:', error);
             setError('Invalid email or password');
             setLoading(false);
         }
@@ -61,7 +62,7 @@ export default function Login() {
                         </div>
                     </div>
 
-                    <div className="input-group text-right">
+                    <div className="input-group">
                         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                             <label htmlFor="password" style={{ marginBottom: '0.5rem' }}>Password</label>
                             <Link to="#" style={{ fontSize: '0.85rem', color: 'var(--primary)', marginBottom: '0.5rem', fontWeight: '500' }}>Forgot password?</Link>
