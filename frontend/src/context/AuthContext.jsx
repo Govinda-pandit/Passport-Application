@@ -3,11 +3,11 @@ import axios from 'axios';
 
 export const AuthContext = createContext();
 
-export const AuthProvider = ({ children }) => {
-    const [user, setUser] = useState(null);
-    const [loading, setLoading] = useState(true);
-
-    const API_URL = 'https://passport-application.onrender.com/api';
+const API_URL = import.meta.env.VITE_API_URL || 'https://passport-application.onrender.com/api';
+ 
+ export const AuthProvider = ({ children }) => {
+     const [user, setUser] = useState(null);
+     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
         const token = localStorage.getItem('token');
