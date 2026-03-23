@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -8,10 +9,10 @@ const path = require('path');
 
 const app = express();
 const PORT = process.env.PORT || 5000;
-const SECRET_KEY = 'passport_demo_secret'; // In production, use env var
+const SECRET_KEY = process.env.SECRET_KEY || 'passport_demo_secret';
 
 // Setup persistence via a JSON file so that data isn't lost on restart but doesn't require DB setup
-const DATA_FILE = path.join(__dirname, 'data.json');
+const DATA_FILE = path.join(__dirname, process.env.DATA_FILE_PATH || 'data.json');
 
 // Initialize dummy storage
 let storage = {
